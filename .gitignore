@@ -1,0 +1,40 @@
+node_modules/
+.next/
+out/
+dist/
+.vercel/
+.DS_Store
+*.log
+npm-debug.log*
+.playwright-mcp/
+
+# Next.js leftovers (not needed for static deploy)
+src/
+next-env.d.ts
+next.config.js
+postcss.config.js
+tailwind.config.js
+tsconfig.json
+package.json
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# dev artifacts
+BEGINNING.docx
+docx_text*.txt
+eng.traineddata
+extract_docx.py
+extracted_assets/
+r2_test.png
+scratch_panels/
+temp.txt
+user_inputs.txt
+implementation_plan.md
+task.md
+walkthrough.md
+indexold.html
+/1.mp3
+/2ND AUDIO.mp3
+images/young/*.mp3
+images/young/*.mp4
