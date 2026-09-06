@@ -586,6 +586,34 @@ body.cinematic-active .book-wrapper::before {
     to { opacity: 1; }
 }
 
+/* SEO/GEO/AEO text fallback — crawlable, off-screen, never display:none (Google discounts it) */
+.seo-fallback {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+/* If JS fails, show fallback as normal content */
+noscript .seo-fallback {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 2rem auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    max-width: 720px;
+    padding: 2rem;
+    background: #fbf8ef;
+    color: #2b1208;
+    border-radius: 8px;
+}
+
 /* Guide Instruction Text Below Each Comic Panel */
 .scene-instruction {
     margin-top: 14px;

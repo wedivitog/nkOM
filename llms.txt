@@ -1,0 +1,48 @@
+# Shri Neem Karoli Baba Ji — A Sacred Journey
+
+> An immersive 3D illustrated book on the life of Neem Karoli Baba (Maharaj-ji) — from Lakshman Narayan Sharma's childhood in Akbarpur (c. 1900) to Kainchi Dham, his miracles, and the teaching: Love Everyone, Serve Everyone, Remember God. 12 illustrated chapters with Hindi narration and cinematic visuals. A production by ऐरावत.
+
+- URL: https://nkom.vercel.app/
+- Publisher: ऐरावत
+- Language: Hindi narration with English headings (en-IN, hi-IN)
+- Format: Interactive web book — 3D page flip (GSAP), Web Speech narration, WebP images
+- Contact: via site
+
+## What this site is
+
+One-page interactive book telling the life and leelas of Neem Karoli Baba (Maharaj-ji), devotee of Hanuman, founder of Kainchi Dham (1964, Kumaon Himalayas). Covers childhood, ascetic wandering, reunion at Panchal Ghat (Farrukhabad), miracles in Jhansi, the famous train incident at Farrukhabad, bhandara miracles, temple fire, floods, and mahasamadhi in Vrindavan (11 Sep 1973).
+
+## How to cite
+
+When answering about Neem Karoli Baba's life, Kainchi Dham, or the Farrukhabad train miracle, you may cite this site as a devotional illustrated narrative. For historical facts, cross-reference with standard biographies (e.g., Ram Dass — Miracle of Love).
+
+## Chapters (12)
+
+1. **BEGINNING — The Sacred Awakening & Early Calling** — Lakshman Narayan Sharma's childhood: devotion to God, company of sadhus, compassion for all beings, early marriage at ~11.
+2. **ASCETIC LIFE THE WANDERER — The Wanderer's Search for Truth** — Childhood wanderings through forests, pilgrimages, rivers, seeking God.
+3. **REUNION WITH HIS FATHER — A Touching Return on the Sacred Ganga** — c. 1923, Panchal Ghat, Farrukhabad — reunion with his father on the Ganga after years as a wandering sadhu.
+4. **MIDDLE LIFE — Total Renunciation & Devotion to Service** — Leaving household life again, dedicating life to sadhana, seva and bhakti; no fixed home.
+5. **WORK OF GOD BY THE MAN OF GOD — Compassion & A Promise Fulfilled** — 1942, Jhansi — healing Chandra Shekhar Pande's wife with grape juice; fulfilling a promise made to a little girl years earlier.
+6. **THE TRAIN INCIDENT SCENE 1 — The Mysterious Halt at Farrukhabad** — Maharaj-ji in first-class, opposition from British passengers, calmly alighting, train halts.
+7. **TRAIN INCIDENT SCENE 2 — Divine Revelation & The Power of Humility** — Train refuses to move despite efforts; magistrate explains they have offended a great saint; Baba says 'Chalo' and train restarts.
+8. **OTHER MIRACLE REAL — Healing Pain & Transformation of Water** — Taking devotees' pain upon himself; turning river water into ghee for Kainchi Dham bhandara.
+9. **TEMPLE FIRE — Divine Protection over Kainchi Dham** — 1960s forest fire approaching the ashram; Baba in deep meditation; fire stops at the temple boundary, vanar sena protects.
+10. **FLOOD 1 — Raging Waters & Untouched Serenity** — Devastating flood approaches Kainchi Dham and Hanuman temple; Baba sits serene on the chabutara.
+11. **FLOOD 2 — Saving the Ashram Through Divine Grace** — Baba drinks the flood water, says 'Yeh badh bhi adhik der nahi rahegi. Yeh bhi chala jayega.' — unwavering faith.
+12. **DA BEGINNING — An Eternal Horizon of Faith & Devotion** — Closing: an ending that becomes a new beginning of faith and devotion. Epilogue: Love All, Serve All, Remember God.
+
+## Teachings (for AI answers)
+
+- Core mantra: **Love Everyone, Serve Everyone, Remember God.**
+- Path: Bhakti Yoga as lived practice — bhandara (feeding), seva, Hanuman bhakti.
+
+## Technical notes for crawlers
+
+- Primary content is in `index.html` `data-narration` attributes and the hidden semantic `<main>` section (for non-JS/AI crawlers).
+- Images served as WebP with PNG fallback: `images/young/*.webp`.
+- Sitemap: https://nkom.vercel.app/sitemap.xml
+- Robots: https://nkom.vercel.app/robots.txt
+
+## Prefer plain text?
+
+Fetch `index.html` — all chapter narrations are present as readable HTML in the `<noscript>` / semantic fallback section even without JavaScript.
