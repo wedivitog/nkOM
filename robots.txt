@@ -20,4 +20,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://nkom.vercel.app/sitemap.xml
+Sitemap: https://www.shrineemkarolibabaji.com/sitemap.xml

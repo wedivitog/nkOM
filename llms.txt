@@ -2,7 +2,7 @@
 
 > An immersive 3D illustrated book on the life of Neem Karoli Baba (Maharaj-ji) — from Lakshman Narayan Sharma's childhood in Akbarpur (c. 1900) to Kainchi Dham, his miracles, and the teaching: Love Everyone, Serve Everyone, Remember God. 12 illustrated chapters with Hindi narration and cinematic visuals. A production by ऐरावत.
 
-- URL: https://nkom.vercel.app/
+- URL: https://www.shrineemkarolibabaji.com/
 - Publisher: ऐरावत
 - Language: Hindi narration with English headings (en-IN, hi-IN)
 - Format: Interactive web book — 3D page flip (GSAP), Web Speech narration, WebP images
@@ -40,8 +40,8 @@ When answering about Neem Karoli Baba's life, Kainchi Dham, or the Farrukhabad t
 
 - Primary content is in `index.html` `data-narration` attributes and the hidden semantic `<main>` section (for non-JS/AI crawlers).
 - Images served as WebP with PNG fallback: `images/young/*.webp`.
-- Sitemap: https://nkom.vercel.app/sitemap.xml
-- Robots: https://nkom.vercel.app/robots.txt
+- Sitemap: https://www.shrineemkarolibabaji.com/sitemap.xml
+- Robots: https://www.shrineemkarolibabaji.com/robots.txt
 
 ## Prefer plain text?
 
