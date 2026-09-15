@@ -631,3 +631,100 @@ noscript .seo-fallback {
     z-index: 1;
 }
 
+/* ==========================================
+   RESPONSIVE — phones / tablets / short screens
+   ========================================== */
+
+/* Tablet portrait + large phones */
+@media (max-width: 1024px) {
+    .book {
+        width: 94vw;
+        height: 82vh;
+        height: 82dvh;
+    }
+    .front { padding: 1.5rem; }
+    .back { padding: 2rem 1.5rem; }
+}
+
+/* Phones (portrait) — spread must fit narrow viewport */
+@media (max-width: 768px) {
+    .book-wrapper {
+        perspective: 1800px;
+        padding: 0 2vw;
+    }
+    .book {
+        width: 96vw;
+        height: 76vh;
+        height: 76dvh;
+        max-height: none;
+        transform: rotateX(4deg);
+    }
+    /* Spine shadow narrower on small spread */
+    .book::after { width: 30px; }
+    .front { padding: 0.9rem; border-radius: 0 8px 8px 0; }
+    .back { padding: 1.2rem 0.9rem; border-radius: 8px 0 0 8px; }
+    .img-container { border-width: 2px; }
+    .cover-content { gap: 0.8rem; max-width: 94%; }
+    .cover-badge { font-size: 1.1rem; }
+    .cover-title .title-shri { font-size: clamp(1.4rem, 8vw, 2rem); letter-spacing: 6px; }
+    .cover-title .title-neem { font-size: clamp(1.6rem, 9vw, 2.4rem); letter-spacing: 4px; }
+    .cover-title .title-babaji { font-size: clamp(1.5rem, 8.5vw, 2.2rem); letter-spacing: 5px; }
+    .scroll-instruction { font-size: 0.72rem; letter-spacing: 3px; }
+    .left-page-title { font-size: clamp(1rem, 4.5vw, 1.3rem); }
+    .left-page-subtitle { font-size: 0.62rem; letter-spacing: 2px; }
+    .scene-instruction { font-size: 0.62rem; margin-top: 8px; letter-spacing: 0.4px; }
+    .page h2 { font-size: 1.4rem; margin: 0.4rem 0 1rem; }
+    /* Softer float on small screens (less motion sickness + GPU) */
+    @keyframes antigravity-float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+    }
+    /* Buttons reachable + above mobile browser chrome */
+    .narrate-btn {
+        width: 52px; height: 52px;
+        bottom: calc(18px + env(safe-area-inset-bottom));
+        right: calc(16px + env(safe-area-inset-right));
+    }
+    .lightbox-close {
+        top: calc(10px + env(safe-area-inset-top));
+        right: 18px;
+        font-size: 2.6rem;
+        padding: 8px;
+    }
+    .lightbox img { max-width: 96vw; max-height: 86vh; max-height: 86dvh; }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .book { height: 72vh; height: 72dvh; }
+    .front { padding: 0.6rem; }
+    .back { padding: 1rem 0.6rem; }
+    .cover-divider { width: 80%; }
+}
+
+/* Touch devices — no hover overlay (prevents stuck highlight), keep tap affordance */
+@media (hover: none) {
+    .img-container:hover::after { opacity: 0; }
+}
+
+/* Short landscape (phones rotated) — height is the constraint */
+@media (max-height: 500px) {
+    .book {
+        width: auto;
+        aspect-ratio: 16 / 10;
+        height: 92vh;
+        height: 92dvh;
+        max-width: 96vw;
+    }
+    .front { padding: 0.8rem; }
+    .back { padding: 1rem; }
+    .scene-instruction { display: none; }
+    .narrate-btn { width: 46px; height: 46px; bottom: 12px; right: 12px; }
+}
+
+/* Reduced motion — respect OS setting */
+@media (prefers-reduced-motion: reduce) {
+    .floating-anchor { animation: none; }
+    .scroll-instruction { animation: none; }
+}
+

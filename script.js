@@ -304,20 +304,12 @@ flippablePages.forEach((page, i) => {
     tl.add(pageTl, i * 1.5); // Slight overlap for continuous smooth scrolling
 });
 
-// Interactive 3D tilt on mouse move
-let isScrolling = false;
-let scrollTimeout;
-
-window.addEventListener('scroll', () => {
-    isScrolling = true;
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-        isScrolling = false;
-    }, 100);
-});
-
+// Interactive 3D tilt on mouse move — desktop pointers only.
+// On touch phones/tablets mousemove fires from taps and fights the
+// scroll-driven flip; coarse pointers skip tilt entirely.
+const isCoarsePointer = window.matchMedia && window.matchMedia('(hover: none), (pointer: coarse)').matches;
+if (!isCoarsePointer) {
 document.addEventListener('mousemove', (e) => {
-    if (isScrolling) return; // Reduce jitter while scrolling
     
     // Calculate tilt based on mouse position relative to center of screen
     const mouseX = (e.clientX / window.innerWidth) - 0.5;
@@ -331,6 +323,7 @@ document.addEventListener('mousemove', (e) => {
         ease: "power2.out"
     });
 });
+} // end non-coarse tilt guard
 
 // --- LIGHTBOX & ENLARGE SETUP (Single Reusable Overlay) ---
 const lightbox = document.getElementById('lightbox');
@@ -2101,7 +2094,8 @@ function initParticles() {
     const ctx = canvas.getContext('2d');
     let width, height;
     let particles = [];
-    const PARTICLE_COUNT = 90;
+    // ponytail: fewer particles on small screens, upgrade path is DPR-scaled count
+    const PARTICLE_COUNT = window.innerWidth < 768 ? 35 : 90;
 
     function resize() {
         width = canvas.width = window.innerWidth;
@@ -2109,6 +2103,13 @@ function initParticles() {
     }
     resize();
     window.addEventListener('resize', resize);
+    // Mobile browser chrome show/hide changes innerHeight without resize;
+    // refresh ScrollTrigger so flips stay in sync with the scrub range.
+    let rt;
+    window.addEventListener('resize', () => {
+        clearTimeout(rt);
+        rt = setTimeout(() => { if (window.ScrollTrigger) ScrollTrigger.refresh(); }, 250);
+    });
 
     class Particle {
         constructor() {
