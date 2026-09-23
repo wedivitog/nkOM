@@ -539,6 +539,18 @@ body.cinematic-active .img-container::after {
     transition: transform 0.3s, background 0.3s;
 }
 
+/* Keyboard accessibility — visible focus ring for interactive controls */
+.narrate-btn:focus-visible,
+.lightbox-close:focus-visible {
+    outline: 2px solid #dfb15b;
+    outline-offset: 3px;
+    border-radius: 50%;
+}
+
+.lightbox-close:focus-visible {
+    border-radius: 4px;
+}
+
 .narrate-btn:hover {
     transform: scale(1.1);
     background: #e5c175;
