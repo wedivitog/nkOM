@@ -417,6 +417,8 @@ body {
     display: block;
     pointer-events: auto;
     background: #0a0604; /* avoids white flash while loading */
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 /* Opacity-only hover affordance (Dark overlay + expand icon; NEVER transform/scale to prevent flicker & animation conflicts) */
