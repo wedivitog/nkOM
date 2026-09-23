@@ -144,7 +144,7 @@ let audioCtx = null;
 let audioEnabled = false;
 let paperSlideBuffer = null;
 let isPaperSlideLoading = false;
-const paperAudioSrc = 'Paper Slide - Sound Effect.mp3';
+const paperAudioSrc = 'audio/Paper Slide - Sound Effect.mp3';
 
 // Preload HTML5 Audio instance for instant fallback
 const fallbackPageAudio = new Audio(paperAudioSrc);
