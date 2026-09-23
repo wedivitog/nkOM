@@ -1151,7 +1151,7 @@ async function playCinematicScene(pageIndex, pageEl, inLightbox = false) {
         targetImg.style.transform = 'scale(1.8) translate(0%, -30.7%)';
 
         // Immediately start 2nd audio.mp3
-        let bgAudio1 = new Audio('2ND AUDIO.mp3');
+        let bgAudio1 = new Audio('audio/2nd_audio.mp3');
         bgAudio1.volume = 0.6;
         bgAudio1.play().catch(e => console.log("Audio play blocked", e));
         window.activeBgAudio = bgAudio1;
@@ -1216,7 +1216,7 @@ async function playCinematicScene(pageIndex, pageEl, inLightbox = false) {
         targetImg.style.transformOrigin = 'center 90%';
         targetImg.style.transform = 'scale(3.0)';
         
-        let bgAudio1 = new Audio('1.mp3');
+        let bgAudio1 = new Audio('audio/1.mp3');
         bgAudio1.volume = 0.5;
         bgAudio1.play().catch(e => console.log("Audio play blocked", e));
         window.activeBgAudio = bgAudio1;
@@ -1267,7 +1267,7 @@ async function playCinematicScene(pageIndex, pageEl, inLightbox = false) {
         targetImg.style.transform = 'scale(1.52) translate(17.0%, 30.6%)';
 
         // Play 1.mp3 immediately when camera reaches this master panel
-        let bgAudio2 = new Audio('1.mp3');
+        let bgAudio2 = new Audio('audio/1.mp3');
         bgAudio2.volume = 0.6;
         bgAudio2.play().catch(e => console.log("Audio play blocked", e));
         window.activeBgAudio = bgAudio2;
@@ -1424,7 +1424,7 @@ async function playCinematicScene(pageIndex, pageEl, inLightbox = false) {
 
     } else if (pageIndex === 7 && !inLightbox) { 
         // Fallback for Scene 2 in-book (mirrors the authentic 9-act storyline)
-        let bgAudio = new Audio('1.mp3');
+        let bgAudio = new Audio('audio/1.mp3');
         bgAudio.volume = 0.5;
         bgAudio.play().catch(e => console.log("Audio play blocked", e));
         window.activeBgAudio = bgAudio;
