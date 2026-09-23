@@ -2094,7 +2094,7 @@ function initParticles() {
     const ctx = canvas.getContext('2d');
     let width, height;
     let particles = [];
-    // ponytail: fewer particles on small screens, upgrade path is DPR-scaled count
+    // fewer particles on small screens — keeps mobile GPUs cool
     const PARTICLE_COUNT = window.innerWidth < 768 ? 35 : 90;
 
     function resize() {
